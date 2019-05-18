@@ -1,12 +1,24 @@
-import React, { Component } from "react";
-import Item from "./TodoItem";
+import React, { Component } from 'react';
+import Item from './TodoItem';
 export default class TodoList extends Component {
   render() {
     return (
-      <section>
-        <h2>todo list</h2>
-        <Item />
-      </section>
+      <div>
+        <h2 style={{ display: 'grid' }}>To do's</h2>
+        {this.props.info.map(e => {
+          return (
+            <div key={e.id}>
+              <Item
+                id={e.id}
+                title={e.title}
+                delete={() => {
+                  this.props.Delete(e.id);
+                }}
+              />
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
