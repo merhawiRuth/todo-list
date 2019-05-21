@@ -11,7 +11,7 @@ export default class TodoItem extends Component {
               <div style={{ float: 'right' }}>
                 <i
                   onClick={() => {
-                    this.props.delete(this.props.id);
+                    this.props.edit(this.props.id);
                   }}
                   className="edit outline icon"
                 />

@@ -14,6 +14,9 @@ export default class TodoList extends Component {
                 delete={() => {
                   this.props.Delete(e.id);
                 }}
+                edit={() => {
+                  this.props.Edit(e.id);
+                }}
               />
             </div>
           );

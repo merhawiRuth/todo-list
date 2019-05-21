@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 export default class TodoInput extends Component {
-  onSubmit = e => {
-    this.setState({ title: e.target.value });
-  };
   render() {
     return (
       <div>
@@ -20,8 +17,12 @@ export default class TodoInput extends Component {
               />
             </div>
           </div>
-          <button className={this.props.buttonColor} type="submit">
-            {this.props.buttonWord}
+          <button
+            type="submit"
+            onClick={this.props.handleBtn}
+            className="fluid ui blue button"
+          >
+            Add
           </button>
         </form>
       </div>
